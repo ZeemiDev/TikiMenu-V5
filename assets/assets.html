@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikiMenu V5 - Assets</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        addEventListener("message", event => {
+            const { audio, volume } = event.data;
+                
+            if (audio) {
+                const a = new Audio(`http://198.1.195.43:55143/${audio}`);
+        
+                a.volume = volume;
+                a.play();
+            }
+        });
+    </script>
+</body>
+</html>
